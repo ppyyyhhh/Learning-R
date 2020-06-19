@@ -4,7 +4,6 @@ author: "ppyyyhhh"
 date: "6/19/2020"
 output: pdf_document
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -14,6 +13,13 @@ knitr::opts_chunk$set(echo = TRUE)
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+- bullets  
+- **Here**  
+- *I prepared*"  
+- **bold**  
+- *italics*  
+- [link](http://google.com)  
+- or run inline 'r code'  
 
 ```{r cars}
 summary(cars)
@@ -29,12 +35,6 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-```{r cars}
-"Reference"
-"**Here** *I prepared*"
-"_ bullets
--**bold**
--*italics*
-[link](http://google.com)
--or run inline 'r code'"
+```{r}
+
 ```
