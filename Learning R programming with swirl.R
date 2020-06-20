@@ -76,5 +76,114 @@ dir.create(file.path("testdir2","testdir3"), recursive = TRUE)
 setwd(old.dir) # Go back to your original working directory using setwd().
 
 
+swirl()
+Happy
+1
+1
+3 #  In this lesson, you'll learn how to create sequences of numbers in R.
+
+1:20 # In this lesson, you'll learn how to create sequences of numbers in R.
+pi:10 #The result is a vector of real numbers starting with pi (3.142...) and increasing in  increments of 1. The upper limit of 10 is never reached, since the next number in our  sequence would be greater than 10.
+15:1
+?':'
+seq(1,20)
+seq(0,10, by=0.5)
+my_seq <- seq(5,10, length=30)
+length(my_seq)
+1:length(my_seq)
+seq(along.with=my_seq)
+seq_along(my_seq)
+rep(0, times = 40)
+rep(c(0,1,2), each = 10)
+
+4 #The simplest and most common data structure in R is the vector.
+num_vect <- c(0.5, 55, -10, 6)
+tf <- num_vect <1
+2
+tf
+num_vect >= 6
+
+my_char <- c("My", "name", "is")
+my_char
+paste(my_char, collapse = " ") # Use paste(my_char, collapse = " ") to collapse the words in the vector so they almost form a sentence. There should be a single space between the double quotes in the `collapse` argument so that there are single spaces separating the words.
+
+my_name <- c(my_char, "Happy")
+my_name
+paste(my_name, collapse = " ")
+paste("Hello","world!", sep = " ") # Enter paste("Hello", "world!", sep = " ") to join the two words "Hello" and "world", separated by a single space. There should be a single space between the double quotes in the `sep` argument to the paste() function.
+
+paste(c(1:3), c("X", "Y", "Z"), sep = "")
+paste(LETTERS, 1:4, sep="-")
+1
+
+#Class of missing Values
+x <-c(44, NA,5, NA)
+x*3
+y<- rnorm(1000)
+z <- rep(NA, 1000)
+my_data <- sample(c(y,z),100)
+my_na <- is.na(my_data)
+my_na
+my_data == NA
+sum(my_na) #The trick is to recognize that underneath the surface, R represents TRUE as the number 1 and FALSE as the number 0. Therefore, if we take the sum of a bunch of TRUEs and FALSEs,  we get the total number of TRUEs.
+my_data
+0/0
+Inf - Inf
+2
 
 
+# 6 In this lesson, we'll see how to extract elements from a vector based on some conditions  that we specify.
+
+x
+x[1:10]
+is.na(x)
+4
+1
+x[is.na(x)]
+y<- x[!is.na(x)]
+y
+
+y[y>0]
+x[x>0]
+x[!is.na(x) & x>0]
+x[c(3,5,7)]
+x[3000]
+x[c(-2,-10)]
+x[-c(2,10)]
+vect<- c(foo=11, bar=2, norf= NA)
+vect
+names(vect)
+vect2 <- c(11,2,NA)
+names(vect2) <- c("foo","bar","norf")
+identical(vect, vect2)
+2
+vect["bar"]
+vect[c("foo","bar")]
+2
+
+
+
+#7 matrices and data frame
+
+my_vector <- 1:20
+my_vector
+dim(my_vector)
+length(my_vector)
+dim(my_vector) <- c(4, 5)
+dim(my_vector)
+attributes(my_vector)
+my_vector
+class(my_vector)
+my_matrix <- my_vector
+?matrix
+my_matrix2 <- matrix(1:20, nrow = 4, ncol = 5)
+identical(my_matrix, my_matrix2)
+patients <- c("Bill","Gina","Kelly","Sean")
+cbind(patients, my_matrix)
+my_data <- data.frame(patients, my_matrix)
+my_data
+class(my_data)
+cnames <- c("patient","age","weight","bp","rating","test")
+colnames(my_data) <- cnames
+my_data
+1
