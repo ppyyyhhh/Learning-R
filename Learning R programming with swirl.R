@@ -1,3 +1,5 @@
+#CLass1 Building the basic block of R
+
 5+7
 x<-5+7
 x
@@ -37,13 +39,11 @@ c(1, 2, 3, 4) + c(0, 10, 100)
 mTJwU7QMbhHPwWht
 info()
 swirl()
-Piyang
-1
 
 
 
 
-2 #Workspace and Files
+ # CLass 2Workspace and Files
 getwd() #Determine which directory your R session is using as its current working directory using
 ls()
 x<- 9 
