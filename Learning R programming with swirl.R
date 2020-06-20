@@ -34,4 +34,5 @@ c(1,2,3,4) + c(0,10) # If the length of the shorter vector does not divide evenl
 c(1, 2, 3, 4) + c(0, 10, 100)
 # If the length of the shorter vector does not divide evenly into the length of the longer vector, R will still apply the 'recycling' method, but will throw a warning to let you know something fishy might be going on.
 
-
+mTJwU7QMbhHPwWht
+info()
