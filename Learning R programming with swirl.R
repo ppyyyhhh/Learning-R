@@ -36,3 +36,45 @@ c(1, 2, 3, 4) + c(0, 10, 100)
 
 mTJwU7QMbhHPwWht
 info()
+swirl()
+Piyang
+1
+
+
+
+
+2 #Workspace and Files
+getwd() #Determine which directory your R session is using as its current working directory using
+ls()
+x<- 9 
+ls() #Now take a look at objects that are in your workspace using ls()
+list.files()#List all the files in your working directory using list.files() or dir()
+dir()
+?list.files #list.files to see the help page.
+args()
+args(list.files)  #Use the args() function to determine the arguments to list.files()
+old.dir <- getwd() #Type old.dir <- getwd() to assign the value of the current working directory to a variable called "old.dir".
+dir.create("testdir") # Use dir.create() to create a directory in the current working directory called  "testdir".
+setwd("testdir") #Set your working directory to "testdir" with the setwd() command.
+file.create("mytest.R") #Create a file in your working directory called "mytest.R" using the file.create() function.
+list.files() #list.files() shows that the directory only contains mytest.R
+file.exists("mytest.R")  #Check to see if "mytest.R" exists in the working directory using the file.exists()
+
+file.info("mytest.R")  #Access information about the file "mytest.R" by using file.info().
+file.info("mytest.R")$mode  #You can use the $ operator --- e.g., file.info("mytest.R")$mode --- to grab specific items.
+file.rename(from = "mytest.R", to = "mytest2.R") #Change the name of the file "mytest.R" to "mytest2.R" by using file.rename().
+
+file.copy(from = "mytest2.R", to = "mytest3.R")  #Make a copy of "mytest2.R" called "mytest3.R" using file.copy()
+
+file.path("mytest3.R")  #Provide the relative path to the file "mytest3.R" by using file.path().
+
+file.path("folder1", "folder2")   #You can use file.path to construct file and directory paths that are independent of the operating system your R code is running on. Pass 'folder1' and 'folder2' as arguments tofile.path to make a platform-independent pathname.
+
+?dir.create
+dir.create(file.path("testdir2","testdir3"), recursive = TRUE)
+
+setwd(old.dir) # Go back to your original working directory using setwd().
+
+
+
+
