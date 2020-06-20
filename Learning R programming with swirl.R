@@ -187,3 +187,30 @@ cnames <- c("patient","age","weight","bp","rating","test")
 colnames(my_data) <- cnames
 my_data
 1
+
+
+getwd()
+my_hw <- read.csv(file = "/Users/hupiyang/GitHub/testing/hw1_data.csv", header = TRUE)
+Ozone <- c(data_fa[,"Ozone"])
+class(Ozone)
+is.na(Ozone)
+sum(is.na(Ozone))
+Ozone[47]
+mean(Ozone)
+Ozone1 <- Ozone[!is.na(Ozone)]
+class(Ozone1)
+mean(Ozone1)
+data_fa <-data.frame(my_hw)
+dim(data_fa)
+colnames(data_fa)
+length(data_fa)
+Temp <- c(data_fa[,"Temp"])
+new <- subset(data_fa, Ozone >31 & Temp >90, select = c(Ozone, Solar.R, Temp))
+new
+class(new)
+Solar1 <- c(new[,"Solar.R"])
+mean(Solar1)
+mean(c(subset(data_fa, Month == 6, select = c(Month, Temp))[,"Temp"]))
+data_fa1 <- subset(data_fa, is.na(Ozone)==FALSE,select = c(Month,Ozone))
+
+max(c(subset(data_fa1, Month == 5, select = c(Ozone))[,"Ozone"]))
