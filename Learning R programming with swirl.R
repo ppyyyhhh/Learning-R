@@ -189,6 +189,8 @@ my_data
 1
 
 
+#week one quiz answer.
+
 getwd()
 my_hw <- read.csv(file = "/Users/hupiyang/GitHub/testing/hw1_data.csv", header = TRUE)
 Ozone <- c(data_fa[,"Ozone"])
