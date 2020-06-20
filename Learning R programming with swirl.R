@@ -14,14 +14,24 @@ z   #Type z to view its contents. Notice that there are no commas separating the
 
 c(z, 555, z)    #You can combine vectors to make a new vector. Create a new vector that contains z, 555, then z again in that order. Don't assign this vector to a new variable, so that we can just see the result immediately.
 
-z * 2 + 100     #Numeric vectors can be used in arithmetic expressions. Type the following to see what happens: z * 2 + 100.
+z * 2 + 1000     #Numeric vectors can be used in arithmetic expressions. Type the following to see what happens: z * 2 + 100.
 # First, R multiplied each of the three elements in z by 2. Then it added 100 to each element to get the result you see above.
-
+#R is 'recycling' the 2 to make a vector of 2s and the 100 to make a vector of 100s. In other words, when you ask R to compute z * 2 + 100, what it really computes is this: z * c(2, 2, 2) + c(100, 100, 100).
 my_sqrt <- sqrt(z-1) #Take the square root of z - 1 and assign it to a new variable called my_sqrt.
 #  a vector of length 3
 
 print(my_sqrt)
 
 my_sqrt     #Just type my_sqrt and press Enter to view its value.
+
+my_div <- z / my_sqrt     #create a new variable called my_div that gets the value of z divided by my_sqrt.
+
+print(my_div)
+info()
+my_div
+c(1,2,3,4) + c(0,10) # If the length of the shorter vector does not divide evenly into the length of the longer vector, R will still apply the 'recycling' method, but will throw a warning to let you  know something fishy might be going on.
+
+c(1, 2, 3, 4) + c(0, 10, 100)
+# If the length of the shorter vector does not divide evenly into the length of the longer vector, R will still apply the 'recycling' method, but will throw a warning to let you know something fishy might be going on.
 
 
